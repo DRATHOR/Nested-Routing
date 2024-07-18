@@ -1,0 +1,36 @@
+.headerContainer {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    height: 9vh;
+    padding: 0 2vw;
+    background-color: rgb(37, 37, 61);
+
+    .headerLeft {
+
+        flex-grow: 1;
+
+        .heading {
+            font-weight: 600;
+            font-size: 3vh;
+            color: #ffffff;
+        }
+
+    }
+
+    .headerRight {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1vw;
+        flex-grow: 2;
+
+        a {
+            font-weight: 400;
+            font-size: 3vh;
+            color: #ffffff;
+            text-decoration: none;
+        }
+    }
+
+}

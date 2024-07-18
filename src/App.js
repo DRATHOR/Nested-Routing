@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Contacts from "./pages/contacts/contacts";
+import Header from "./components/header/header";
+import Instagram from "./pages/instagram";
+import WhatsApps from "./pages/whatsApps";
+import Layout from "./components/layout/layout";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Header />
+        <Layout>
+          <Routes>
+            <Route excet path="/" Component={Home} />
+            <Route path="/about" Component={About} />
+            <Route path="/contacts/" Component={Contacts}>
+              <Route path="instagram" Component={Instagram} />
+              <Route path="whats-app" Component={WhatsApps} />
+            </Route>
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </>
   );
 }
 
