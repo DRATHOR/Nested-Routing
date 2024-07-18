@@ -19,6 +19,7 @@ function App() {
             <Route excet path="/" Component={Home} />
             <Route path="/about" Component={About} />
             <Route path="/contacts/" Component={Contacts}>
+            <Route path="" Component={Instagram} />
               <Route path="instagram" Component={Instagram} />
               <Route path="whats-app" Component={WhatsApps} />
             </Route>
